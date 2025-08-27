@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.env
+
+# dbt
+dbt/target/
+dbt/dbt_modules/
+
+# Airbyte
+.airbyte/
+airbyte/logs/
+
+# Prefect
+.prefect/
+*.orion/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
