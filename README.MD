@@ -20,12 +20,18 @@ The pipeline follows a modular ELT approach:
 6. **Visualization**: Tableau dashboards provide actionable insights.
 7. **Notification**: Slack alerts notify stakeholders of pipeline status.
 
+The data sources are multi-cloud and hybrid in nature:
+- MySQL (operational data)
+- AWS S3 (data lake storage)
+- AWS Redshift (warehouse)
+- Google Cloud Storage (feedback archive)
+
 ## 🧰 Tech Stack
 | Stage           | Tool                 |
-|----------------|----------------------|
-| Generate        | Python / Mockaroo    |
+|-----------------|----------------------|
+| Generate        | Python (JupyterLab)  |
 | Extract & Load  | Airbyte              |
-| Staging         | PostgreSQL           |
+| Staging         | DuckDB               |
 | Transform       | dbt Core             |
 | Warehouse       | PostgreSQL           |
 | Quality         | Great Expectations   |
@@ -34,13 +40,14 @@ The pipeline follows a modular ELT approach:
 | Notify          | Slack / Email        |
 
 ## 📦 Folder Structure
-smart-city-elts/ 
-├── airbyte/ 
-├── dbt/ 
-├── prefect/ 
-├── expectations/ 
-├── dashboards/ 
-├── docs/ 
+smart-city-elts/
+├── 00 synthetic data/  
+├── 01 airbyte/ 
+├── 02 dbt/ 
+├── 03 prefect/ 
+├── 04 expectations/ 
+├── 05 dashboards/ 
+├── 06 docs/ 
 └── README.md
 
 ## 🚀 How to Run
